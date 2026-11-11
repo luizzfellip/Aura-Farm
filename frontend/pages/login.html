@@ -1,40 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Farm — Login</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aura Farm — Login</title>
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
 <div class="auth-page">
-  <div class="auth-left">
-    <div class="logo-area">
-      <div class="logo-text">AURA</div>
-      <div class="logo-sub">FARM</div>
-      <div class="logo-scratch"></div>
-      <div class="logo-tagline">Streetwear & Culture</div>
+
+    <div class="auth-left">
+
+        <div class="logo-area">
+
+            <div class="logo-text">AURA</div>
+
+            <div class="logo-sub">FARM</div>
+
+            <div class="logo-scratch"></div>
+
+            <div class="logo-tagline">
+                STREETWEAR & CULTURE
+            </div>
+
+        </div>
+
     </div>
-  </div>
-  <div class="auth-right">
-    <div class="form-title">ENTRAR</div>
-    <div class="form-subtitle">Acesse sua conta para continuar</div>
-    <div class="field">
-      <label>E-mail</label>
-      <input type="email" placeholder="seu@email.com" />
-    </div>
-    <div class="field">
-      <label>Senha</label>
-      <input type="password" placeholder="••••••••" />
-    </div>
-    <div class="forgot">
-      <a href="recuperar-senha.html">Esqueceu a senha?</a>
-    </div>
-    <button class="btn-primary" onclick="window.location.href='dashboard.html'">ENTRAR</button>
-    <div class="divider"><span>ou</span></div>
-    <button class="btn-secondary" onclick="window.location.href='novo-funcionario.html'">CRIAR CONTA (FUNCIONÁRIO)</button>
-    <div class="bottom-note">Sistema de Gerenciamento — Aura Farm © 2026</div>
-  </div>
+
+    <div class="auth-right">
+
+        <div class="form-title">
+            ENTRAR
+        </div>
+
+        <div class="form-subtitle">
+            Acesse sua conta para continuar
+        </div>
+
+        <div id="erro-login" class="form-error"></div>
+
+        <div class="field">
+
+            <label>E-MAIL</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="seu@email.com">
+
+        </div>
+
+        <div class="field">
+
+            <label>SENHA</label>
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="********">
+
+        </div>
+
+        <div class="forgot-password">
+
+            <a href="recuperar-senha.html">
+                Esqueceu a senha?
+            </a>
+
+        </div>
+
+        <button class="btn-primary" id="btn-entrar">
+            ENTRAR
+        </button>
+
+        <div class="login-link">
+            Primeiro acesso? <a href="primeiro-acesso.html">Defina sua senha</a>
+        </div>
+
 </div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+
 </body>
 </html>

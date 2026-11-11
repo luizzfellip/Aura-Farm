@@ -1,32 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Aura Farm — Recuperar Senha</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Aura Farm — Recuperar Senha</title>
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-<div class="auth-page">
-  <div class="auth-left">
-    <div class="logo-area">
-      <div class="logo-text">AURA</div>
-      <div class="logo-sub">FARM</div>
-      <div class="logo-scratch"></div>
-      <div class="logo-tagline">Streetwear & Culture</div>
+
+    <div class="auth-page">
+
+        <div class="auth-left">
+
+            <div class="logo-area">
+
+                <div class="logo-text">
+                    AURA
+                </div>
+
+                <div class="logo-sub">
+                    FARM
+                </div>
+
+                <div class="logo-scratch"></div>
+
+                <div class="logo-tagline">
+                    Streetwear & Culture
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="auth-right">
+
+            <div class="form-title">
+                RECUPERAR SENHA
+            </div>
+
+            <div class="form-subtitle" id="subtitulo-recuperar-senha">
+                Informe o e-mail cadastrado para receber um código de verificação
+            </div>
+
+            <div id="erro-recuperar-senha" class="form-error"></div>
+            <div id="sucesso-recuperar-senha" class="form-success"></div>
+
+            <div id="passo-1-email">
+
+                <div class="field">
+                    <label>E-mail cadastrado</label>
+                    <input type="email" id="email-recuperacao" placeholder="seu@email.com">
+                </div>
+
+                <button class="btn-primary" id="btn-solicitar-codigo">
+                    ENVIAR CÓDIGO
+                </button>
+
+            </div>
+
+            <div id="passo-2-codigo" style="display:none">
+
+                <div class="field">
+                    <label>Código recebido por e-mail</label>
+                    <input type="text" id="codigo-recuperacao" placeholder="000000" maxlength="6">
+                </div>
+
+                <button class="btn-primary" id="btn-verificar-codigo">
+                    VERIFICAR CÓDIGO
+                </button>
+
+            </div>
+
+            <div id="passo-3-nova-senha" style="display:none">
+
+                <div class="field">
+                    <label>Nova senha</label>
+                    <input type="password" id="nova-senha" placeholder="********">
+                </div>
+
+                <div class="field">
+                    <label>Confirmar nova senha</label>
+                    <input type="password" id="confirmar-nova-senha" placeholder="********">
+                </div>
+
+                <button class="btn-primary" id="btn-redefinir-senha">
+                    REDEFINIR SENHA
+                </button>
+
+            </div>
+
+            <div id="passo-4-sucesso" style="display:none; text-align:center;">
+                <div style="font-size:40px; margin-bottom:12px;">✓</div>
+                <div class="form-subtitle">Senha redefinida com sucesso. Redirecionando para o login...</div>
+            </div>
+
+            <div
+                id="link-voltar-login"
+                class="login-link"
+                style="margin-top:20px">
+
+                <a href="login.html">
+                    Voltar ao login
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
-  <div class="auth-right">
-    <div class="form-title">RECUPERAR SENHA</div>
-    <div class="form-subtitle">Enviaremos um código para seu e-mail</div>
-    <div class="field">
-      <label>E-mail cadastrado</label>
-      <input type="email" placeholder="seu@email.com" />
-    </div>
-    <button class="btn-primary" onclick="alert('Código enviado (simulação). Verifique seu e-mail.')">ENVIAR CÓDIGO</button>
-    <div class="login-link" style="margin-top:20px">
-      <a href="login.html">Voltar ao login</a>
-    </div>
-  </div>
-</div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
+
 </body>
+
 </html>
